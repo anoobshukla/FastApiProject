@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 import uvicorn 
 
-app = FastAPI()
+app = FastAPI(
+    title="I4E Python APIs",
+    description="I4E Python FastAPI using Swagger and Sqlalchemy",
+    version="1.0.0",
+)
 
 @app.get("/hello")
 async def say_hello(name: str):
